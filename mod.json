@@ -18,12 +18,12 @@
 		}
 	},
 	"dependencies": [
-        {
-            "id": "geode.node-ids",
-            "version": ">=v1.20.0",
-            "importance": "required"
-        }
-    ],
+        	{
+            		"id": "geode.node-ids",
+            		"version": ">=v1.20.0",
+            		"importance": "required"
+        	}
+    	],
 	"resources": {
 		"sprites": [
 			"resources/comparison_default.png",
@@ -35,6 +35,6 @@
 		"gameplay", "interface", "offline"
 	],
 	"links": {
-		"source": ""
+		"source": "https://github.com/senya5544/169_overlay"
 	}
 }
