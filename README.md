@@ -1,23 +1,9 @@
-# 169Overlay
-This is where she makes a mod.
+# 16:9 Overlay
 
-<img src="logo.png" width="150" alt="the mod's logo" />
+This Geometry Dash mod solves the problem of playing PC-adapted (16:9) levels on smartphones and tablets with different aspect ratios (20:9, 4:3, etc). It places an overlay on top of the gameplay without resizing the game window and, therefore, moving UI and limitting the touch area.
 
-*Update logo.png to change your mod's icon (please)*
+![Unmodded](./resources/comparison_default.png)
 
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
+![Using built-in Geode option](./resources/comparison_builtin.png)
 
-## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
-```sh
-# Assuming you have the Geode CLI set up already
-geode build
-```
-
-# Resources
-* [Geode SDK Documentation](https://docs.geode-sdk.org/)
-* [Geode SDK Source Code](https://github.com/geode-sdk/geode/)
-* [Geode CLI](https://github.com/geode-sdk/cli)
-* [Bindings](https://github.com/geode-sdk/bindings/)
-* [Dev Tools](https://github.com/geode-sdk/DevTools)
+![Using 16:9 Overlay](./resources/comparison_overlay.png)
