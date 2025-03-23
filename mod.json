@@ -1,0 +1,40 @@
+{
+	"geode": "4.3.1",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074"
+	},
+	"id": "senya5544.169_overlay",
+	"name": "16:9 Overlay",
+	"version": "v1.0.0",
+	"developer": "senya5544",
+	"description": "Places a 16:9 overlay on top of the gameplay.",
+	"settings": {
+		"enabled": {
+			"type": "bool",
+			"default": true,
+			"name": "Enabled",
+			"description": "Makes the mod enabled."
+		}
+	},
+	"dependencies": [
+        {
+            "id": "geode.node-ids",
+            "version": ">=v1.20.0",
+            "importance": "required"
+        }
+    ],
+	"resources": {
+		"sprites": [
+			"resources/comparison_default.png",
+			"resources/comparison_builtin.png",
+			"resources/comparison_overlay.png"
+		]
+	},
+	"tags": [
+		"gameplay", "interface", "offline"
+	],
+	"links": {
+		"source": ""
+	}
+}
