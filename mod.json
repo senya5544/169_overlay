@@ -6,7 +6,7 @@
 	},
 	"id": "senya5544.169_overlay",
 	"name": "16:9 Overlay",
-	"version": "v1.0.0",
+	"version": "v1.0.1",
 	"developer": "senya5544",
 	"description": "Places a 16:9 overlay on top of the gameplay.",
 	"settings": {

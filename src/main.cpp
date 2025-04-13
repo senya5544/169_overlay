@@ -18,13 +18,13 @@ class $modify(PlayLayer) {
 
 		if(!mod_enabled) return true;
 
-		CCNode* main_node = getChildByID("main-node");
+		CCNode* overlay = CCNode::create();
+
 		CCDirector* director = CCDirector::get();
 		CCSize winSize = director->getWinSize();
 		float ratio = winSize.width / winSize.height;
 		int ratio_width = ratio * 9;
 
-		/* If it works, don't touch it. */
 		if(ratio_width > 16) {
 			CCSprite* right = CCSprite::create("square.png");
 			right->setColor(ccc3(0, 0, 0));
@@ -32,7 +32,7 @@ class $modify(PlayLayer) {
 			right->setScaleY(winSize.height / right->getContentHeight());
 			right->setAnchorPoint(ccp(0, 0.5));
 			right->setPosition(ccp(winSize.width - right->getScaledContentWidth(), winSize.height / 2));
-			main_node->addChild(right, 1024);
+			overlay->addChild(right);
 	
 			CCSprite* left = CCSprite::create("square.png");
 			left->setColor(ccc3(0, 0, 0));
@@ -40,7 +40,7 @@ class $modify(PlayLayer) {
 			left->setScaleY(winSize.height / left->getContentHeight());
 			left->setAnchorPoint(ccp(1, 0.5));
 			left->setPosition(ccp(left->getScaledContentWidth(), winSize.height / 2));
-			main_node->addChild(left, 1024);
+			overlay->addChild(left);
 		} else if(ratio_width < 16) {
 			CCSprite* top = CCSprite::create("square.png");
 			top->setColor(ccc3(0, 0, 0));
@@ -48,7 +48,7 @@ class $modify(PlayLayer) {
 			top->setScaleY(winSize.height / 9 * (16 - ratio_width) / 4 / top->getContentHeight());
 			top->setAnchorPoint(ccp(0.5, 0));
 			top->setPosition(ccp(winSize.width / 2, winSize.height - top->getScaledContentHeight()));
-			main_node->addChild(top, 1024);
+			overlay->addChild(top);
 	
 			CCSprite* bottom = CCSprite::create("square.png");
 			bottom->setColor(ccc3(0, 0, 0));
@@ -56,12 +56,10 @@ class $modify(PlayLayer) {
 			bottom->setScaleY(winSize.height / 9 * (16 - ratio_width) / 4 / top->getContentHeight());
 			bottom->setAnchorPoint(ccp(0.5, 1));
 			bottom->setPosition(ccp(winSize.width / 2, bottom->getScaledContentHeight()));
-			main_node->addChild(bottom, 1024);
+			overlay->addChild(bottom);
 		}
-		/* <==========================> */
 
-		// Honestly I don't even know how this works
-		// TODO: Make levels fit all devices (without any crops)
+		addChild(overlay, 1);
 
 		return true;
 	}
